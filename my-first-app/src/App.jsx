@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Title from "./components/Title";
-import Items from "./components/Items";
+import Items from "./components/items/Items";
 
 function App() {
   const sum = 2 + 2;
