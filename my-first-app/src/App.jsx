@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Title from "./components/Title";
 import Items from "./components/items/Items";
+import Counter from './components/counter/Counter';
 
 function App() {
   const sum = 2 + 2;
@@ -15,6 +16,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Counter step={5}/>
+
+
         <Items items={books} />
 
         <Title color="green" title={"Hello"} subtitle={"World"} />
