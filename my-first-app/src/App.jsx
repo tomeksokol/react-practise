@@ -3,6 +3,7 @@ import "./App.css";
 import Title from "./components/Title";
 import Items from "./components/items/Items";
 import Counter from './components/counter/Counter';
+import Button from './components/button/Button';
 
 function App() {
   const sum = 2 + 2;
@@ -17,6 +18,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Counter step={5}/>
+
+        <p>
+
+        <Button label={"click me"} disabled={true}/>
+        <Button label={"click me"} disabled={!true}/>
+
+        </p>
 
 
         <Items items={books} />
