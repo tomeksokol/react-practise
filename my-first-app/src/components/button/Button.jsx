@@ -1,7 +1,7 @@
 import styles from "./Button.module.css";
 
-const Button = ({ type = "button", label, disabled }) => {
-  const btnClasses = [styles.button];
+const Button = ({ type = "button", label, disabled, sendEventData }) => {
+  // const btnClasses = [styles.button];
 
   //second way
 
@@ -9,15 +9,19 @@ const Button = ({ type = "button", label, disabled }) => {
   //remove if and join
   //third way
 
-  //const btnClasses = [styles.button, disabled && styles.disabled].join(" ");
+  const btnClasses = [styles.button, disabled ? styles.disabled : ""].join(" ");
   //remove if and join
 
-  if (disabled) {
-    btnClasses.push(styles.disabled);
-  }
+  // if (disabled) {
+  //   btnClasses.push(styles.disabled);
+  // }
 
   return (
-    <button className={btnClasses.join(" ")} type={type} disabled={disabled}>
+    <button
+      onClick={sendEventData}
+      className={btnClasses}
+      type={type}
+      disabled={disabled}>
       {label}
     </button>
   );

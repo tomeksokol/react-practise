@@ -13,16 +13,17 @@ function App() {
     { id: "id-3", name: "React Router overview" },
     { id: "id-4", name: "Redux in depth" },
   ];
+  const sendEventData = (e) => console.log(e.target);
 
   return (
     <div className="App">
       <header className="App-header">
-        <Counter step={5}/>
+        <Counter step={5} initCount={0}/>
 
         <p>
 
-        <Button label={"click me"} disabled={true}/>
-        <Button label={"click me"} disabled={!true}/>
+        <Button label={"click me"} disabled={true} sendEventData={sendEventData}/>
+        <Button label={"click me"} disabled={!true} sendEventData={sendEventData}/>
 
         </p>
 
