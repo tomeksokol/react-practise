@@ -4,6 +4,7 @@ import Title from "./components/Title";
 import Items from "./components/items/Items";
 import Counter from './components/counter/Counter';
 import Button from './components/button/Button';
+import TextInput from "./components/form/TextInput";
 
 function App() {
   const sum = 2 + 2;
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <TextInput />
         <Counter step={5} initCount={0}/>
 
         <p>
