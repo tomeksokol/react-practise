@@ -19,6 +19,7 @@ class Counter extends Component {
 
   state = {
     count: this.props.initCount,
+    joke: "",
   }
 
   //UPDATE
@@ -29,6 +30,7 @@ class Counter extends Component {
       //second way
       //this.setState({count: this.state.count - this.props.step})
     }));
+    this.componentDidMount();
   };
 
   handleDecrement = (evt) => {
@@ -36,6 +38,8 @@ class Counter extends Component {
       ...state,
       count: state.count - props.step,
     }));
+
+    this.componentDidMount();
   };
 
   //second way
@@ -45,14 +49,24 @@ class Counter extends Component {
   //   }))
   // }
 
+  //FETCH HTTP
+  componentDidMount() {
+    fetch("https://api.chucknorris.io/jokes/random")
+    .then(d => d.json())
+    .then(({value}) => {
+      this.setState({ joke: value })
+    })
+    .catch(console.log);
+  }
 
   //VIEW
   render() {
     const { step } = this.props;
-    const { count } = this.state;
+    const { count, joke } = this.state;
 
     return (
       <div>
+        <p>{joke ? joke : "Loading..."}</p>
         <p>
           <button type="button" onClick={this.handleIncrement}>
             + {step}

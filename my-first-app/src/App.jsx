@@ -19,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <p></p>
         <TextInput />
         <Counter step={5} initCount={0}/>
 

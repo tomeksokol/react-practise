@@ -6,7 +6,7 @@ class TextInput extends Component {
   };
 
   handleChange = evt => {
-    this.setState({ value: evt.target.value });
+    this.setState({ inputValue: evt.target.value });
   };
 
   render() {
