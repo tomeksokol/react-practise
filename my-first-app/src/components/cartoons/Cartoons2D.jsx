@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import {getData} from "./../api/apiCalls";
-import { CARTOONS2D_URL } form "./"
+import { CARTOONS2D_URL } from "./"
 
 
 const Cartoons2D = () => {

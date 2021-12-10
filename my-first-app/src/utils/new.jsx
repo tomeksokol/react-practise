@@ -1,0 +1,1 @@
+//rafce snippet for funcional component witth arrow function and export

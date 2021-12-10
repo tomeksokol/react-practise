@@ -7,6 +7,7 @@ import Button from './components/button/Button';
 import TextInput from "./components/form/TextInput";
 import Jokes from "./components/jokes/Jokes";
 import JokesHooks from "./components/jokes/JokesHooks";
+import FetchImages from "./components/fetchImages/FetchImages";
 
 function App() {
   const sum = 2 + 2;
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <FetchImages />
         <p></p>
         <Jokes btnLabel={"Fetch new Joke"}/>
         <p></p>
