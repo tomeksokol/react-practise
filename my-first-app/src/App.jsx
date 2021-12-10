@@ -6,7 +6,7 @@ import Counter from './components/counter/Counter';
 import Button from './components/button/Button';
 import TextInput from "./components/form/TextInput";
 import Jokes from "./components/jokes/Jokes";
-import JokesHooks from "./components/jokes/JokesHooks";
+// import JokesHooks from "./components/jokes/JokesHooks";
 import FetchImages from "./components/fetchImages/FetchImages";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
         <p></p>
         <Jokes btnLabel={"Fetch new Joke"}/>
         <p></p>
-        <JokesHooks btnLabel={"Fetch new Joke by Hooks"}/>
+        {/* <JokesHooks btnLabel={"Fetch new Joke by Hooks"}/> */}
         <p></p>
         <TextInput />
         <Counter step={5} initCount={0}/>
