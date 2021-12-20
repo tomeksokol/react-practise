@@ -6,8 +6,11 @@ import Counter from './components/counter/Counter';
 import Button from './components/button/Button';
 import TextInput from "./components/form/TextInput";
 import Jokes from "./components/jokes/Jokes";
+import About from "./components/pages/About";
 // import JokesHooks from "./components/jokes/JokesHooks";
 import FetchImages from "./components/fetchImages/FetchImages";
+import { Route, Routes } from "react-router-dom";
+
 
 function App() {
   const sum = 2 + 2;
@@ -22,6 +25,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Routes>
+          <Route path="/about" element={<About />}></Route>
+        </Routes>
+
+        
+
+
         <FetchImages />
         <p></p>
         <Jokes btnLabel={"Fetch new Joke"}/>
